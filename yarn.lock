@@ -2015,7 +2015,7 @@ autoprefixer@^9.1.5, autoprefixer@^9.8.0:
     postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
 
-awesome-typescript-loader@^5.2.0:
+awesome-typescript-loader@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-5.2.1.tgz#a41daf7847515f4925cdbaa3075d61f289e913fc"
   integrity sha512-slv66OAJB8orL+UUaTI3pKlLorwIvS4ARZzYR9iJJyGsEgOqueMfOMdKySWzZ73vIkEe3fcwFgsKMg4d8zyb1g==
@@ -7383,6 +7383,14 @@ micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4, micromatch@^3.1.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+micromatch@^4.0.0:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
+  integrity sha512-pRmzw/XUcwXGpD9aI9q/0XOwLNygjETJ8y0ao0wdqprrzDa4YnxLcz7fQRZr8voh8V10kGhABbNcHVk5wHgWwg==
+  dependencies:
+    braces "^3.0.1"
+    picomatch "^2.2.3"
+
 micromatch@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.2.tgz#4fcb0999bf9fbc2fcbdd212f6d629b9a56c39259"
@@ -8528,6 +8536,11 @@ picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
+
+picomatch@^2.2.3:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
+  integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
 
 pidtree@^0.3.0:
   version "0.3.1"
@@ -9937,6 +9950,13 @@ semver@^7.2.1, semver@^7.3.2:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
   integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
 
+semver@^7.3.4:
+  version "7.3.5"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
+  integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
+  dependencies:
+    lru-cache "^6.0.0"
+
 send@0.17.1:
   version "0.17.1"
   resolved "https://registry.yarnpkg.com/send/-/send-0.17.1.tgz#c1d8b059f7900f7466dd4938bdc44e11ddb376c8"
@@ -11167,6 +11187,17 @@ tryer@^1.0.1:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
+ts-loader@8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-8.1.0.tgz#d6292487df279c7cc79b6d3b70bb9d31682b693e"
+  integrity sha512-YiQipGGAFj2zBfqLhp28yUvPP9jUGqHxRzrGYuc82Z2wM27YIHbElXiaZDc93c3x0mz4zvBmS6q/DgExpdj37A==
+  dependencies:
+    chalk "^4.1.0"
+    enhanced-resolve "^4.0.0"
+    loader-utils "^2.0.0"
+    micromatch "^4.0.0"
+    semver "^7.3.4"
+
 tsconfig-paths@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.9.0.tgz#098547a6c4448807e8fcb8eae081064ee9a3c90b"
@@ -11349,10 +11380,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.0.1:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+typescript@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.2.tgz#399ab18aac45802d6f2498de5054fcbbe716a805"
+  integrity sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw==
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
