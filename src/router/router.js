@@ -1,5 +1,4 @@
-import VueRouter from 'vue-router';
-import Vue from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
 import { routeParser } from 'vue-i18n-manager';
 import { PropertyNames, VariableNames } from '../data/enum/configNames';
 import getLocaleConfig from '../config/localeConfig';
@@ -7,8 +6,6 @@ import { CONFIG_MANAGER } from '../data/Injectables';
 import { getValue } from '../util/injector';
 
 import routes from './routes';
-
-Vue.use(VueRouter);
 
 let router = null;
 
@@ -21,12 +18,12 @@ const getRouter = () => {
       localeConfig.localeEnabled && localeConfig.localeRoutingEnabled
         ? routeParser(routes, configManager.getProperty(PropertyNames.DEFAULT_LOCALE))
         : routes.concat({
-            path: '*',
+            path: '/:pathMatch(.*)*',
             redirect: '/',
           });
 
-    router = new VueRouter({
-      mode: 'history',
+    router = createRouter({
+      history: createWebHistory(),
       routes: processedRoutes,
       base: configManager.getVariable(VariableNames.PUBLIC_PATH),
     });

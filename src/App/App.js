@@ -5,6 +5,7 @@ import { SET_DEVICE_STATE } from '../store/module/app/app';
 // @vue/component
 export default {
   name: 'App',
+  inject: ['$deviceStateTracker'],
   computed: {
     ...mapState({
       deviceState: (state) => state.app.deviceState,
