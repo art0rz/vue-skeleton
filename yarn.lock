@@ -11776,10 +11776,10 @@ vue-i18n-manager@^3.2.2:
   resolved "https://registry.yarnpkg.com/vue-i18n-manager/-/vue-i18n-manager-3.3.3.tgz#02c1e4a7aca8bcca438d18e9cc7085aa5ff1644c"
   integrity sha512-yhDIwey7VuSiNGpuExNLY7ewdg584B1IGS+bbHr8GNIR50h7iuPaOcuyBGCzuUPILMuK1kgMppiZf3XRloa6eQ==
 
-vue-loader@^15.0.10:
-  version "15.9.3"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.9.3.tgz#0de35d9e555d3ed53969516cac5ce25531299dda"
-  integrity sha512-Y67VnGGgVLH5Voostx8JBZgPQTlDQeOVBLOEsjc2cXbCYBKexSKEpOA56x0YZofoDOTszrLnIShyOX1p9uCEHA==
+vue-loader@^15.9.7:
+  version "15.9.7"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.9.7.tgz#15b05775c3e0c38407679393c2ce6df673b01044"
+  integrity sha512-qzlsbLV1HKEMf19IqCJqdNvFJRCI58WNbS6XbPqK13MrLz65es75w392MSQ5TsARAfIjUw+ATm3vlCXUJSOH9Q==
   dependencies:
     "@vue/component-compiler-utils" "^3.1.0"
     hash-sum "^1.0.2"
@@ -11800,10 +11800,10 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@^2.2.6:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.11.tgz#c04704ef8f498b153130018993e56309d4698080"
-  integrity sha512-KIq15bvQDrcCjpGjrAhx4mUlyyHfdmTaoNfeoATHLAiWB+MU3cx4lOzMwrnUh9cCxy0Lt1T11hAFY6TQgroUAA==
+vue-template-compiler@^2.6.13:
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.13.tgz#a735b8974e013ce829e7f77e08e4ee5aecbd3005"
+  integrity sha512-latKAqpUjCkovB8XppW5gnZbSdYQzkf8pavsMBZYZrQcG6lAnj0EH4Ty7jMwAwFw5Cf4mybKBHlp1UTjnLPOWw==
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -11820,10 +11820,10 @@ vue-types@^1.0.1:
   dependencies:
     is-plain-object "3.0.0"
 
-vue@^2.2.5:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
-  integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
+vue@^2.6.13:
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.13.tgz#94b2c1b31fddf1dfcc34f28ec848ba8f01ea4c5b"
+  integrity sha512-O+pAdJkce1ooYS1XyoQtpBQr9An+Oys3w39rkqxukVO3ZD1ilYJkWBGoRuadiQEm2LLJnCL2utV4TMSf52ubjw==
 
 vuex-router-sync@^5.0.0:
   version "5.0.0"
