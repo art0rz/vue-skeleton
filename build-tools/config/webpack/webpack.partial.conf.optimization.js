@@ -45,8 +45,6 @@ module.exports = ({ isDevelopment }) => webpackConfig => ({
         // Default number of concurrent runs: os.cpus().length - 1
         parallel: true,
         // Enable file caching
-        cache: false,
-        sourceMap: false,
       })
     ],
     concatenateModules: true,
