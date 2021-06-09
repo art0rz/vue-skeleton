@@ -99,6 +99,7 @@ module.exports = ({ config, isDevelopment, buildType }) => (webpackConfig) => {
         svgo: null,
         gifsicle: null,
         pngquant: config.dist.enablePNGQuant ? { quality: config.dist.pngQuantQuality } : null,
+        cacheFolder: '.imagemincache'
       }),
     );
 
