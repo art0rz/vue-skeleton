@@ -1,4 +1,4 @@
-import { validateType } from 'vue-types/es/utils';
+import { validateType } from 'vue-types';
 
 /**
  * Transforms the given typechecker from `vue-types` to allow for a `null` value.
