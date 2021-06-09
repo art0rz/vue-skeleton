@@ -48,6 +48,9 @@ module.exports = {
 
   compileNodeModules: false, // use babel to compile js code in node_modules
 
+  // see https://github.com/webpack/webpack-dev-server/issues/2758
+  target: 'web',
+
   devServer: {
     indexHtml: path.resolve(__dirname, '../../dist/index.html'),
     port: process.env.PORT || 8080,
