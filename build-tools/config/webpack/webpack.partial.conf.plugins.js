@@ -1,5 +1,4 @@
 const path = require('path');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -80,14 +79,13 @@ module.exports = ({ config, isDevelopment, buildType }) => (webpackConfig) => {
      * ------------------------------------------------
      */
     plugins.push(
-      new WebpackCleanupPlugin(),
       new MiniCssExtractPlugin({
         filename: path.posix.join(config.dist.versionPath, 'css/[name].css'),
       }),
       new LodashModuleReplacementPlugin({
         paths: true,
       }),
-      new webpack.NamedChunksPlugin(),
+      // new webpack.NamedChunksPlugin(),
       new OptimizeCssAssetsPlugin({
         cssProcessorOptions: {
           parser: require('postcss-safe-parser'),

@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = ({ config, isDevelopment }) => webpackConfig => ({
   ...webpackConfig,
   output: {
+    clean: true,
     path: path.join(config.projectRoot, 'dist'),
     publicPath: isDevelopment ? '/' : config.dist.publicPath,
     globalObject: 'this',
