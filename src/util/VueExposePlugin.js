@@ -1,15 +1,11 @@
 export default {
-  install(Vue, options) {
+  install(app, options) {
     Object.keys(options).forEach((key) => {
-      if (Vue.prototype[key]) {
+      if (app[key]) {
         // eslint-disable-next-line no-console
         console.error(`Skipping ${key}. ${key} already exists on the Vue prototype`);
       } else {
-        Object.defineProperty(Vue.prototype, key, {
-          get() {
-            return options[key];
-          },
-        });
+        app.provide(key, options[key]);
       }
     });
   },

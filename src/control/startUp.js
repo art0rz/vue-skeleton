@@ -1,27 +1,26 @@
-import Vue from 'vue';
 import axios from 'axios';
 import DeviceStateTracker from 'seng-device-state-tracker';
 import VueExposePlugin from '../util/VueExposePlugin';
-import { URLNames, PropertyNames, VariableNames } from '../data/enum/configNames';
+import { PropertyNames, URLNames, VariableNames } from '../data/enum/configNames';
 import { RouteNames } from '../router/routes';
 import { createPath } from '../util/routeUtils';
 import Params from '../data/enum/Params';
 import { getValue } from '../util/injector';
 import { CONFIG_MANAGER, GATEWAY } from '../data/Injectables';
 import localeLoader from '../util/localeLoader';
-import { mediaQueries, deviceState } from '../data/mediaQueries.json';
+import mediaQueries from '../data/mediaQueries.json';
 import waitForStyleSheetsLoaded from '../util/waitForStyleSheetsLoaded';
 
-const initPlugins = () => {
+const initPlugins = (app) => {
   const configManager = getValue(CONFIG_MANAGER);
 
-  const cleanMediaQueries = Object.keys(mediaQueries).reduce((result, key) => {
-    result[key] = mediaQueries[key].replace(/'/g, '');
+  const cleanMediaQueries = Object.keys(mediaQueries.mediaQueries).reduce((result, key) => {
+    result[key] = mediaQueries.mediaQueries[key].replace(/'/g, '');
     return result;
   }, {});
 
   // expose objects to the Vue prototype for easy access in your vue templates and components
-  Vue.use(VueExposePlugin, {
+  app.use(VueExposePlugin, {
     $config: configManager,
     $gateway: getValue(GATEWAY),
     $http: axios,
@@ -35,10 +34,10 @@ const initPlugins = () => {
     createPath,
     $deviceStateTracker: new DeviceStateTracker({
       mediaQueries: cleanMediaQueries,
-      deviceState,
+      deviceState: mediaQueries.deviceState,
       showStateIndicator: process.env.NODE_ENV !== 'production',
     }),
-    DeviceState: deviceState,
+    DeviceState: mediaQueries.deviceState,
   });
 };
 
@@ -55,9 +54,9 @@ const waitForLocale = (store) =>
     }
   });
 
-const startUp = (store) => {
+const startUp = (app, store) => {
   // Initialise plugins
-  initPlugins();
+  initPlugins(app);
 
   const configManager = getValue(CONFIG_MANAGER);
 

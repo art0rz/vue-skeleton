@@ -2,6 +2,7 @@
 <script src="./Icon.js"></script>
 
 <template>
+  <!-- // eslint-disable-next-line -->
   <span
     :class="[$style.icon]"
     v-html="icon"
